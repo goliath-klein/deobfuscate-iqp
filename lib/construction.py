@@ -98,6 +98,7 @@ def initialization(n, m, g, m1=None, d=None, seed = None, rowAlgorithm=2):
     #G  = H.T@H
     m2=m-m1
     BC = R_s[:,g:]
+    G  = H.T@H
     
     print("m2 - rank(BC) =", m2 - rank(BC))
     print("n - g - m2 =", n - g - m2)
