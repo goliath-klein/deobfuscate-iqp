@@ -11,12 +11,19 @@ GF = galois.GF(2)
 
 def sample_parameters(n, m, g, seed = None):
     rng = wrap_seed(seed)
-    for _ in range(30):
+    for _ in range(100):
         tmp = [i for i in range(g, m, 2) if i >= 4 and i > g] # m1 = g mod 2, m1 > g
         m1 = tmp[rng.binomial(len(tmp)-1, 0.3)]
         d = rng.binomial(int((m1-g)/2), 0.75) # g + 2*d <= m1
         if g + d <= n and n - g - d <= m - m1 and d > 0:
             break
+
+    ## Routine would silently return bad parameters if no good set was found after 30 iterations (now increased to 100).
+    ## This does happen if one samples thousands of times.
+    ## Rather bail out than return faulty parameters.
+    if not (g + d <= n and n - g - d <= m - m1 and d > 0):
+        print("!! Failed to find good parameters!")
+        exit()
 
     return m1, d
 
