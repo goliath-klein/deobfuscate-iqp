@@ -95,11 +95,12 @@ def initialization(n, m, g, m1=None, d=None, seed = None, rowAlgorithm=2):
 
     #B  = R_s[:,g:g+d]
     #C  = R_s[:,g+d:]
-    #G  = H.T@H
     m2=m-m1
     BC = R_s[:,g:]
     G  = H.T@H
-    
+
+    print("d", d)
+    print("m2", m2)
     print("m2 - rank(BC) =", m2 - rank(BC))
     print("n - g - m2 =", n - g - m2)
     print("slack in bound=", (n-rank(G))-(n-g-m2))
