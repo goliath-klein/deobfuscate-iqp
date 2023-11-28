@@ -77,7 +77,7 @@ def initialization(n, m, g, m1=None, d=None, seed = None, rowAlgorithm=2):
     rng = wrap_seed(seed)
     if m1 is None or d is None:
         m1, d = sample_parameters(n, m, g, seed = rng)
-    print("n, m1, d, m2, g:", n, m1, d, m-m1, g)
+
     D = sample_D(m1, d, seed = rng)
     zeros = GF.Zeros((m1, n-g-D.shape[1]))
     if g == 0:
@@ -85,12 +85,24 @@ def initialization(n, m, g, m1=None, d=None, seed = None, rowAlgorithm=2):
     else:
         F = sample_F(m1, g, D, seed = rng)
         H_s = np.concatenate((F, D, zeros), axis=1)
-
     u = GF.Ones((m1, 1))
     s = random_solution(H_s, u, seed = rng)
 
     R_s = add_row_redundancy(H_s, s, m-m1, seed = rng, rowAlgorithm=rowAlgorithm)
     H = np.concatenate((H_s, R_s), axis=0)
+
+    ## test analytic estimates
+
+    #B  = R_s[:,g:g+d]
+    #C  = R_s[:,g+d:]
+    #G  = H.T@H
+    m2=m-m1
+    BC = R_s[:,g:]
+    
+    print("m2 - rank(BC) =", m2 - rank(BC))
+    print("n - g - m2 =", n - g - m2)
+    print("slack in bound=", (n-rank(G))-(n-g-m2))
+
 
     return H, s.reshape(-1, 1)
 
