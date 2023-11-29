@@ -1,0 +1,80 @@
+Extracting wrong records to 20k-rowAlgo2.log-wrong.tmp
+
+Number of attempts: 20000
+Number of failures: 41
+
+Mean of n - g - m2 overall: 32.2067
+Mean of n - g - m2 among failures: 5.65854
+
+Cases where dim ker G was strictly larger than n−g-m2:
+---
+d 17
+m2 302
+m2 - rank(BC) = 6
+n - g - m2 = -6
+slack in bound= 6
+Attack commencing...
+!! dim ker G = 0, aborting
+!! wrong secret.
+Dumping data to log/5a51f874-1f10-4767-8f60-6de7f8e60f16.json
+
+--
+d 21
+m2 294
+m2 - rank(BC) = 2
+n - g - m2 = 2
+slack in bound= 2
+Attack commencing...
+dim ker G = 4
+!! Can't realize support pattern linearly
+!! wrong secret.
+Dumping data to log/9e470b89-0f17-4faa-a9b4-bf12eb64fd22.json
+--
+d 20
+m2 296
+m2 - rank(BC) = 1
+n - g - m2 = 0
+slack in bound= 2
+Attack commencing...
+dim ker G = 2
+!! Can't realize support pattern linearly
+!! wrong secret.
+Dumping data to log/132f3038-8e3f-42ff-9181-bf3bf1d5462c.json
+--
+d 24
+m2 290
+m2 - rank(BC) = 1
+n - g - m2 = 6
+slack in bound= 1
+Attack commencing...
+dim ker G = 7
+!! Can't realize support pattern linearly
+!! wrong secret.
+Dumping data to log/5d685cad-24e2-4c28-ae25-ff4a00639c4a.json
+--
+d 21
+m2 296
+m2 - rank(BC) = 1
+n - g - m2 = 0
+slack in bound= 2
+Attack commencing...
+dim ker G = 2
+!! Can't realize support pattern linearly
+!! wrong secret.
+Dumping data to log/1fcbc836-e82b-46ee-b62e-a6594097f2e0.json
+--
+d 24
+m2 294
+m2 - rank(BC) = 1
+n - g - m2 = 2
+slack in bound= 2
+Attack commencing...
+dim ker G = 4
+!! Some generators aren't doubly-even. Will throw them out.
+!! Can't realize support pattern linearly
+!! wrong secret.
+---
+
+Number of times sample_D would have returned corrupted data: 0
+
+Removing 20k-rowAlgo2.log-wrong.tmp
