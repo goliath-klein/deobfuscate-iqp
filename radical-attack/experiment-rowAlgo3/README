@@ -1,5 +1,11 @@
-The archive contains the raw data of 20k numerical runs with rowAlgorithm=3.
+The archive contains the raw data of 100624 numerical runs with rowAlgorithm=3.
 
-The file analysis.out contains the output of ../analysis.sh.
+The file analysis.out contains the output of ../analysis.sh 100k.log.
 
-Code used corresponds to commit a6f19215a60d6acded86fcc4e03991eea73076e2.
+To recreate the figures in the accompanying paper:
+
+1) Extract the archive
+2) Run ../analysis.sh 100k.log (from this directory)
+3) Run ../make-figures.py (from this directory)
+
+Code used to create the raw data corresponds to commit a6f19215a60d6acded86fcc4e03991eea73076e2.

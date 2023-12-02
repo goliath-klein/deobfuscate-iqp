@@ -1,13 +1,189 @@
-Extracting wrong records to 20k-rowAlgo3.log-wrong.tmp
+Extracting wrong records to 100k.log-wrong.tmp
 
-Number of attempts:    20000
-Number of failures:       35
+Number of attempts:   100624
+Number of failures:      154
 
-Mean of n - g - m2 overall: 32.1491
-Mean of n - g - m2 among failures: 6.51429
+Mean of n - g - m2 overall: 32.1943
+Mean of n - g - m2 among failures: 6.01299
 
-Cases where dim ker G was strictly larger than n−g-m2:
+Cases where dim ker G was strictly larger than n-g-m2:
 ---
+d 23
+m2 290
+m2 - rank(BC) = 1
+n - g - m2 = 6
+slack in bound= 1
+Attack commencing...
+dim ker G = 7
+Success
+
+d 38
+--
+d 23
+m2 292
+m2 - rank(BC) = 1
+n - g - m2 = 4
+slack in bound= 1
+Attack commencing...
+dim ker G = 5
+Success
+
+d 40
+--
+d 22
+m2 292
+m2 - rank(BC) = 1
+n - g - m2 = 4
+slack in bound= 1
+Attack commencing...
+dim ker G = 5
+!! Can't realize support pattern linearly
+!! wrong secret.
+Dumping data to log/1ef9a51b-9fee-4c86-b131-5daba3e636a9.json
+--
+d 23
+m2 294
+m2 - rank(BC) = 1
+n - g - m2 = 2
+slack in bound= 2
+Attack commencing...
+dim ker G = 4
+!! Can't realize support pattern linearly
+!! wrong secret.
+Dumping data to log/4c066b42-55ba-4049-81b4-638cf89f81eb.json
+--
+d 18
+m2 296
+m2 - rank(BC) = 1
+n - g - m2 = 0
+slack in bound= 2
+Attack commencing...
+dim ker G = 2
+!! Can't realize support pattern linearly
+!! wrong secret.
+Dumping data to log/22cb9528-daae-4d3d-8a3d-a8246c77b5ce.json
+--
+d 21
+m2 298
+m2 - rank(BC) = 2
+n - g - m2 = -2
+slack in bound= 2
+Attack commencing...
+!! dim ker G = 0, aborting
+!! wrong secret.
+Dumping data to log/5a5f06a7-1bbe-4aea-ad18-1b858233cf89.json
+
+--
+d 21
+m2 296
+m2 - rank(BC) = 1
+n - g - m2 = 0
+slack in bound= 2
+Attack commencing...
+dim ker G = 2
+!! Some generators aren't doubly-even. Will throw them out.
+!! wrong secret.
+Dumping data to log/2510adb2-fb87-429b-941d-dfad2cc1aea1.json
+--
+d 21
+m2 298
+m2 - rank(BC) = 3
+n - g - m2 = -2
+slack in bound= 3
+Attack commencing...
+dim ker G = 1
+!! wrong secret.
+Dumping data to log/5d26e74d-ae87-4318-9bd4-6ac6f230a97a.json
+
+--
+d 25
+m2 296
+m2 - rank(BC) = 3
+n - g - m2 = 0
+slack in bound= 4
+Attack commencing...
+dim ker G = 4
+!! Can't realize support pattern linearly
+!! wrong secret.
+Dumping data to log/f4fdec65-d3f8-4b71-817d-f873508e8454.json
+--
+d 22
+m2 296
+m2 - rank(BC) = 1
+n - g - m2 = 0
+slack in bound= 2
+Attack commencing...
+dim ker G = 2
+!! Can't realize support pattern linearly
+!! wrong secret.
+Dumping data to log/e1ab3cf8-e22e-44c2-be75-a31aabb3ae9c.json
+--
+d 22
+m2 294
+m2 - rank(BC) = 1
+n - g - m2 = 2
+slack in bound= 1
+Attack commencing...
+dim ker G = 3
+!! Can't realize support pattern linearly
+!! wrong secret.
+Dumping data to log/ac6d9ede-2a3b-4849-9c94-c94e1e360544.json
+--
+d 21
+m2 300
+m2 - rank(BC) = 4
+n - g - m2 = -4
+slack in bound= 4
+Attack commencing...
+!! dim ker G = 0, aborting
+!! wrong secret.
+Dumping data to log/56bd1925-48a6-4cf4-9296-e9f9a3ba9192.json
+
+--
+d 23
+m2 294
+m2 - rank(BC) = 1
+n - g - m2 = 2
+slack in bound= 2
+Attack commencing...
+dim ker G = 4
+!! Some generators aren't doubly-even. Will throw them out.
+!! wrong secret.
+Dumping data to log/79e4416c-c2b8-44c2-82b0-763d320d881a.json
+--
+d 15
+m2 296
+m2 - rank(BC) = 1
+n - g - m2 = 0
+slack in bound= 1
+Attack commencing...
+dim ker G = 1
+!! wrong secret.
+Dumping data to log/c1699064-5b7e-441c-bf6c-f49c0a8551a8.json
+
+--
+d 28
+m2 294
+m2 - rank(BC) = 1
+n - g - m2 = 2
+slack in bound= 1
+Attack commencing...
+dim ker G = 3
+!! Can't realize support pattern linearly
+!! wrong secret.
+Dumping data to log/f2f61493-f8c4-4a90-98e1-493be9b90f2e.json
+--
+d 26
+m2 294
+m2 - rank(BC) = 1
+n - g - m2 = 2
+slack in bound= 2
+Attack commencing...
+dim ker G = 4
+!! Some generators aren't doubly-even. Will throw them out.
+!! Can't realize support pattern linearly
+!! wrong secret.
+--
 d 17
 m2 296
 m2 - rank(BC) = 1
@@ -20,6 +196,8 @@ Dumping data to log/fb9ce103-c007-476e-8955-58adac5d8cfb.json
 
 ---
 
-Number of times sample_D would have returned corrupted data:        3
+Number of times sample_D would have returned corrupted data:        9
 
-Removing 20k-rowAlgo3.log-wrong.tmp
+Extracting w's, for consumption of make-figures.py
+
+Removing 100k.log-wrong.tmp

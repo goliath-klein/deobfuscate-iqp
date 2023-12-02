@@ -2,7 +2,7 @@
 
 WRONG=$1-wrong.tmp
 echo "Extracting wrong records to $WRONG"
-grep -v pattern $1 | grep -A 1 -B 7 wrong > $WRONG
+grep -v doubly $1 | grep -v pattern | grep -A 1 -B 7 wrong > $WRONG
 
 echo
 echo -n "Number of attempts: "
@@ -18,7 +18,7 @@ echo -n "Mean of n - g - m2 among failures: "
 grep "n - g - m2" $WRONG | cut -d " " -f 7 | awk '{ total += $1 } END { print total/NR }'
 
 echo
-echo "Cases where dim ker G was strictly larger than n−g-m2:" 
+echo "Cases where dim ker G was strictly larger than n-g-m2:" 
 echo "---"
 grep -A5 -B4 "bound= [^0]" $1
 echo "---"
@@ -27,6 +27,11 @@ echo
 echo -n "Number of times sample_D would have returned corrupted data: "
 grep Failed $1 | wc -l
 
+echo
+
+echo "Extracting w's, for consumption of make-figures.py"
+grep -v pattern $1 | grep -A 1 -B 7 Success | grep "n - g - m2" | cut -d "=" -f 2 >w-for-successful-cases.lst
+grep -v pattern $1 | grep -A 1 -B 7 wrong   | grep "n - g - m2" | cut -d "=" -f 2 >w-for-failed-cases.lst
 echo
 
 echo "Removing $WRONG"

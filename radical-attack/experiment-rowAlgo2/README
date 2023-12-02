@@ -1,5 +1,5 @@
 The archive contains the raw data of 20k numerical runs with rowAlgorithm=2.
 
-The file analysis.out contains the output of ../analysis.sh.
+The file analysis.out contains the output of ../analysis.sh 20k-rowAlgo2.log.
 
-Code used corresponds to commit a6f19215a60d6acded86fcc4e03991eea73076e2.
+Code used to create the raw data corresponds to commit a6f19215a60d6acded86fcc4e03991eea73076e2.
