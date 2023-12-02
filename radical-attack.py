@@ -2,7 +2,8 @@ import galois
 import numpy as np
 from lib.utils import rank, solvesystem, dumpToUuid
 from lib.construction import initialization, stabilizer_construction, qrc_construction, sample_parameters
-import json
+import pickle
+
 #print("Please uncomment requested functionality at the end of this file.\n")
 
 GF = galois.GF(2)
@@ -119,14 +120,14 @@ def recoverChallenge(save=False):
 
     if save:
         print("\nSaving the secret")
-        file =  "secret.json"
-        with open(file, 'w') as file:
-            json.dump(s,file)
+        file =  "secret.pickle"
+        with open(file, 'wb') as file:
+            pickle.dump(s,file)
 
-
-
-#recoverChallenge()
-testStabAttack(N=50,n=300,m=360,g=4,rowAlgorithm=3)
+    return s
+ 
+recoverChallenge()
+# # testStabAttack(N=50,n=300,m=360,g=4,rowAlgorithm=3)
 #testQrcAttack()
 
 exit()
