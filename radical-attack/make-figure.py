@@ -53,10 +53,10 @@ def binombars(k,N,w):
 
 
 # Import list of w's. Files are generated from raw data by analysis.sh
-with open('w-for-failed-cases.lst', 'r') as f:
+with open('experiment-rowAlgo3/w-for-failed-cases.lst', 'r') as f:
     wf=np.array([[int(x) for x in line.strip().split(' ')][0] for line in f])
     
-with open('w-for-successful-cases.lst', 'r') as f:
+with open('experiment-rowAlgo3/w-for-successful-cases.lst', 'r') as f:
     ws=np.array([[int(x) for x in line.strip().split(' ')][0] for line in f])
 
 
@@ -105,3 +105,13 @@ ax.set_xticks(wsdata)
 ax.set_xlabel('$w$')
 
 plt.savefig('sigmoid-tests.pdf', bbox_inches = 'tight')
+
+import pickle 
+
+pickleFilename = f"transition_figure_data.pickle"
+with open(pickleFilename, 'wb') as pickleFile:
+    pickle.dump([wrange,[succEstimate(w) for w in wrange]],pickleFile)
+    pickle.dump([wsdata,ps],pickleFile)
+    pickle.dump([wsdata, [succEstimate(w) for w in wsdata]],pickleFile)
+    pickle.dump(np.array(er).T,pickleFile)
+    print("--- DONE --- DONE --- DONE ---")
