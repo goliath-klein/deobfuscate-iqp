@@ -2,7 +2,6 @@ import galois
 import numpy as np
 from lib.utils import dumpToUuid
 from lib.new_attacks import hammingRazor
-#print("Please uncomment requested functionality at the end of this file.\n")
 
 GF = galois.GF(2)
 

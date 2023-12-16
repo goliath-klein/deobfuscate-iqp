@@ -7,8 +7,6 @@ from lib.new_attacks import radicalAttack
 
 GF = galois.GF(2)
 
-#print("Please uncomment requested functionality at the end of this file.\n")
-    
 #### qrc construction
 def testQrcAttack(q,m,n,N=10,**kwargs):
 

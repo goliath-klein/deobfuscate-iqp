@@ -4,7 +4,6 @@ from lib.utils import dumpToUuid
 from lib.construction import stabilizer_construction, qrc_construction
 import pickle
 from lib.new_attacks import lazyLinearityAttack
-#print("Please uncomment requested functionality at the end of this file.\n")
 
 GF = galois.GF(2)
 
