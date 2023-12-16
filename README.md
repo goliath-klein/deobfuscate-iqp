@@ -1,3 +1,20 @@
+# Files for *Secret extraction attacks against obfuscated IQP circuits*
+
+Repository is based on commit 11d4c5258ae20d732eee1d141418d23d3a0b7a27 of https://github.com/AlaricCheng/stabilizer_protocol_sim
+
+Attacks described in the paper can be accessed via the scripts
+
+hamming-razor.py
+double-meyer.py
+lazy-linearity-attack.py
+radical-attack.py
+
+Various options can be set at the end of the respective files.
+
+The directory attacks-data contains the output of the numerical experiments and various scripts for processing them.
+
+
+# Original README below
 
 ### Overview
 
