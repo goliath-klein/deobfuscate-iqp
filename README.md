@@ -21,12 +21,11 @@ Various options can be set at the end of the respective files.
 
 ### Overview
 
-This is the repo for [arXiv:2308.07152](https://arxiv.org/abs/2308.07152). 
+This is the repo for [arXiv:xxxx.xxxxx](https://arxiv.org/abs/xxxx.xxxxx). 
 
-- `lib/` is the directory for source codes of the stabilizer scheme and the Linearity Attack.
+- `lib/` is the directory for source codes of the stabilizer scheme and the Linearity Attack. It also contqains `new_attacks.py' where all attacks documented in the manuscript are implemented
 - `scripts.py` is the source code for generating data, stored in `data/`, which will be used for plotting figures in our paper by `proc_data.py`. The figures are stored in `fig/`.
 - `challenge/` contains a challenge instance, stored in `challenge_H.txt`. It requires 10000 samples (bit strings), which will be checked with `lib.hypothesis.hypothesis_test` and the hidden secret. 
-
 
 ### Environment
 
