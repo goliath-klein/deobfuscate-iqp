@@ -1,8 +1,9 @@
-# Files for *Secret extraction attacks against obfuscated IQP circuits*
+# Files for [Secret extraction attacks against obfuscated IQP circuits](https://arxiv.org/abs/2312.10156)
 
-This repository is based on commit 11d4c5258ae20d732eee1d141418d23d3a0b7a27 of https://github.com/AlaricCheng/stabilizer_protocol_sim
+This repository contains the files for the paper [https://arxiv.org/abs/2312.10156](https://arxiv.org/abs/2312.10156).
+It is based on commit 11d4c5258ae20d732eee1d141418d23d3a0b7a27 of the repository https://github.com/AlaricCheng/stabilizer_protocol_sim, which in turn is associated with the paper [arXiv:2308.07152](https://arxiv.org/abs/2308.07152).
 
-Attacks described in the paper can be accessed via the scripts
+Attacks described in the new paper can be accessed via the scripts
 
 - radical-attack.py
 - lazy-linearity-attack.py
@@ -16,22 +17,8 @@ Various options can be set at the end of the respective files.
 
 - manuscript-figures/ contains code and data to generate the remaining figures
 
+- The various attacks will leave diagnostic data in the log/ folder
 
-# README of original repository below
 
-### Overview
+For a description of all other files, see https://github.com/AlaricCheng/stabilizer_protocol_sim.
 
-This is the repo for [arXiv:xxxx.xxxxx](https://arxiv.org/abs/xxxx.xxxxx). 
-
-- `lib/` is the directory for source codes of the stabilizer scheme and the Linearity Attack. It also contqains `new_attacks.py' where all attacks documented in the manuscript are implemented
-- `scripts.py` is the source code for generating data, stored in `data/`, which will be used for plotting figures in our paper by `proc_data.py`. The figures are stored in `fig/`.
-- `challenge/` contains a challenge instance, stored in `challenge_H.txt`. It requires 10000 samples (bit strings), which will be checked with `lib.hypothesis.hypothesis_test` and the hidden secret. 
-
-### Environment
-
-The specific version of necessary python packages used are as follows.
-
-| Library  | Version |
-|----------|---------|
-| NumPy    | 1.23.4  |
-| galois   | 0.1.1   |
